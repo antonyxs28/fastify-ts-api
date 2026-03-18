@@ -1,0 +1,33 @@
+{
+  "name": "fastify-ts-api",
+  "version": "1.0.0",
+  "description": "Fastify TypeScript API",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --env-file=.env .",
+    "dev": "tsx watch --env-file=.env src/index.ts",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^6.3.1",
+    "@fastify/cors": "^11.2.0",
+    "chalk": "^5.6.2",
+    "consola": "^3.4.2",
+    "fastify": "^5.8.2",
+    "zod": "^4.3.6"
+  },
+  "imports": {
+    "#settings/*": ["./build/settings/*"]
+  }
+}
