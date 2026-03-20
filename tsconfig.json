@@ -16,7 +16,11 @@
     "sourceMap": true,
     "baseUrl": "./src",
     "paths": {
-      "#settings/*": ["./settings/*"]
+      "#settings/*": ["./settings/*"],
+      "#functions/*": ["./functions/*"],
+      "#services/*": ["./services/*"],
+      "#database": ["./database/index.ts"],
+      "#schemas/*": ["./database/schemas/*"]
     }
   },
   "include": ["src/**/*"],
