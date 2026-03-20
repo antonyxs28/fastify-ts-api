@@ -34,8 +34,8 @@ async function createTask(data: CreateTaskSchema) {
 async function upadateTask(id: string, data: UpdateTaskSchema) {
   const task = await getTaksById(id);
   return await db.tasks.set(id, {
-    ...data,
     ...task,
+    ...data
   });
 }
 

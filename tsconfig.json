@@ -11,14 +11,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
     "baseUrl": "./src",
     "paths": {
       "#settings/*": ["./settings/*"],
       "#functions/*": ["./functions/*"],
       "#services/*": ["./services/*"],
+      "#controllers/*": ["./controllers/*"],
       "#database": ["./database/index.ts"],
       "#schemas/*": ["./database/schemas/*"]
     }

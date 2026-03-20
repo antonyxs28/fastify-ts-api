@@ -1,6 +1,6 @@
-export const taskSchema = ["pending", "progress", "completed"] as const;
+export const taskStatus = ["pending", "progress", "completed"] as const;
 
-export type TaskStatus = (typeof taskSchema)[number];
+export type TaskStatus = (typeof taskStatus)[number];
 
 export interface TaskSchema {
   id: string;

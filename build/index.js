@@ -5,7 +5,9 @@ import path from "node:path";
 import log from "consola";
 import ck from "chalk";
 import "#settings/env.js";
+import { errorHandler } from "#functions/error.js";
 const app = fastify();
+app.setErrorHandler(errorHandler);
 app.register(cors, { origin: "*" });
 app.register(autoload, {
     dir: path.join(import.meta.dirname, "routes"),
@@ -22,4 +24,3 @@ await app.listen({ port, host: "0.0.0.0" }).catch((err) => {
     process.exit(1);
 });
 log.success(ck.green(`Server listening on port ${port}`));
-//# sourceMappingURL=index.js.map

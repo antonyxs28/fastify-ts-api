@@ -5,4 +5,3 @@ const envScheme = z.object({
 const parsedEnv = envScheme.parse(process.env);
 process.env = Object.create({ ...process.env, ...parsedEnv
 });
-//# sourceMappingURL=env.js.map
