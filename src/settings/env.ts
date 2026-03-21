@@ -1,10 +1,10 @@
-import {TypeOf, z} from "zod";
+import { TypeOf, z } from "zod";
 
 const envScheme = z.object({
-    PORT: z.number().optional()
-})
+  PORT: z.number().optional(),
+});
 
-type EnvScheme = z.infer<typeof envScheme>
+type EnvScheme = z.infer<typeof envScheme>;
 
 declare global {
   namespace NodeJS {
@@ -13,5 +13,4 @@ declare global {
 }
 
 const parsedEnv = envScheme.parse(process.env);
-process.env=Object.create({...process.env, ...parsedEnv
-})
+process.env = Object.create({ ...process.env, ...parsedEnv });
